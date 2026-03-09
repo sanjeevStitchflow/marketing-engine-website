@@ -13,20 +13,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Marketing Engine | We Build Your AI-Powered Marketing Machine",
+  title: "Marketing Engine by Stitchflow | Become an AI-Native Marketing Team",
   description:
-    "We come in, learn your business, and build an AI-powered marketing engine that produces blogs, sales decks, outbound campaigns, and more — all in your voice.",
+    "We build you an AI-powered marketing engine loaded with your context. Blogs, sales decks, outbound, case studies — output that sounds like you, not like a robot.",
   openGraph: {
-    title: "Marketing Engine | We Build Your AI-Powered Marketing Machine",
+    title: "Marketing Engine by Stitchflow | Become an AI-Native Marketing Team",
     description:
-      "We build your AI-powered marketing engine. Blogs, sales decks, outbound, case studies — all grounded in your positioning and voice.",
+      "Stop juggling AI tools for generic output. We build a marketing engine loaded with your positioning, voice, and buyer language. The output sounds like you.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marketing Engine | We Build Your AI-Powered Marketing Machine",
+    title: "Marketing Engine by Stitchflow | Become an AI-Native Marketing Team",
     description:
-      "We build your AI-powered marketing engine. Blogs, sales decks, outbound, case studies — all grounded in your positioning and voice.",
+      "Stop juggling AI tools for generic output. We build a marketing engine loaded with your positioning, voice, and buyer language. The output sounds like you.",
   },
 };
 

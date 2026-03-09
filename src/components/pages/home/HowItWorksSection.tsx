@@ -3,21 +3,21 @@ import Container from "@/components/global/container";
 const cards = [
   {
     num: "01",
-    title: "We learn your business",
+    title: "We extract your context",
     description:
-      "We run a structured discovery session with you \u2014 your product, your audience, your competitive landscape, your voice. This becomes the foundation for everything we build. No generic questionnaires. A real conversation.",
+      "We run a structured discovery session \u2014 15 questions that pull out your positioning, buyer language, proof points, and voice. This becomes the foundation for everything. Your first asset (golden messaging) is ready after just 4 questions.",
   },
   {
     num: "02",
-    title: "We build your marketing engine",
+    title: "We build your engine",
     description:
-      "Using AI, we construct a system tailored to your business: your positioning, your messaging framework, your writing style, your POV pillars. This engine produces assets that sound like you wrote them \u2014 because it learned from you.",
+      "We build an AI agent inside Claude loaded with your source material \u2014 your golden messaging, content pillars, writing style guide. Every piece of content starts from your context, not from zero. The output sounds like you because the system knows who you are.",
   },
   {
     num: "03",
-    title: "You get a full marketing stack",
+    title: "You own it and run it",
     description:
-      "Blog posts, sales decks, case studies, outbound campaigns, ICP lists, explainer videos \u2014 all produced by your engine, all consistent with your brand. We handle the build. You approve the output.",
+      "Blogs, sales decks, case studies, outbound sequences, explainer videos \u2014 all produced by your engine. You own the system. You run it. If you need changes later, we\u2019re available. The capability compounds over time.",
   },
 ];
 
@@ -29,11 +29,11 @@ export default function HowItWorksSection() {
           How it works
         </p>
         <h2 className="text-3xl md:text-5xl font-semibold tracking-tighter text-gray-900 mb-14 md:mb-16 max-w-[600px]">
-          We learn your business.
+          We extract your context.
           <br />
           We build your engine.
           <br />
-          You get the output.
+          You own it forever.
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">

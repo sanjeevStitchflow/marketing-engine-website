@@ -1,21 +1,21 @@
 import Container from "@/components/global/container";
 
 const beforeItems = [
-  "Hire an agency. Wait 3 months for onboarding.",
-  "Brief a freelancer. Re-explain your product every time.",
-  "Ask ChatGPT. Get the same copy your competitors get.",
-  "Cobble together a sales deck that doesn\u2019t match your blog.",
-  "Write outbound emails by hand. No personalization at scale.",
-  "Marketing assets scattered across Docs, Notion, and Slack.",
+  "Hire an agency. They don\u2019t know your product like you do.",
+  "Use ChatGPT raw. Every session starts from zero. Output sounds generic.",
+  "Buy another SaaS tool. Another dashboard, same slop.",
+  "Juggle between ChatGPT, Canva, Google Docs. Copy-paste prompts everywhere.",
+  "Spend more time editing AI output than writing from scratch.",
+  "\u201CWe don\u2019t even know where to start with AI in marketing.\u201D",
 ];
 
 const afterItems = [
-  "We learn your business in a single working session.",
-  "We build a system that already knows your product and voice.",
-  "Every asset grounded in your positioning. Sounds like you.",
-  "Blog, sales deck, outbound \u2014 all using the same messaging.",
-  "AI-personalized sequences built from your ideal customer profile.",
-  "Everything organized, consistent, and ready to use.",
+  "One system loaded with your positioning, voice, and buyer language.",
+  "Every piece of content starts from your context, not from zero.",
+  "Output that passes the \u201Cwould I actually say this?\u201D test.",
+  "Blog, sales deck, outbound \u2014 all built on the same foundation.",
+  "You own the engine. You run it. The capability compounds.",
+  "10x your marketing output without 10x your team.",
 ];
 
 export default function BeforeAfterSection() {
@@ -26,9 +26,9 @@ export default function BeforeAfterSection() {
           Before &rarr; After
         </p>
         <h2 className="text-4xl md:text-6xl font-semibold tracking-tighter text-gray-900 mb-14 md:mb-16">
-          Three months and $30K.
+          Agencies, freelancers, or AI slop.
           <br />
-          Or one engagement with us.
+          There&apos;s a fourth option.
         </h2>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
@@ -97,10 +97,10 @@ export default function BeforeAfterSection() {
         {/* Summary stats */}
         <div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
           {[
-            { label: "Time to first asset", before: "3 months", after: "1 week" },
-            { label: "Ongoing cost", before: "$10K+/mo", after: "Fraction" },
+            { label: "Content quality", before: "Generic AI slop", after: "Sounds like you" },
+            { label: "Starting point", before: "Blank prompt", after: "Your context" },
             { label: "Voice consistency", before: "Varies", after: "100%" },
-            { label: "Your involvement", before: "Constant", after: "Minimal" },
+            { label: "Output capacity", before: "Bandwidth-limited", after: "10x" },
           ].map((stat) => (
             <div
               key={stat.label}

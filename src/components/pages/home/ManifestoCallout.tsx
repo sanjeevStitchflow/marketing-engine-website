@@ -12,14 +12,15 @@ export default function ManifestoCallout() {
         >
           <div>
             <h3 className="text-2xl md:text-3xl font-semibold tracking-tight text-white leading-snug mb-5">
-              Most marketing teams are either too expensive or too generic.
+              Every option for scaling marketing is broken.
             </h3>
             <p className="text-[15px] md:text-base text-white/75 leading-[1.8] max-w-[900px]">
-              Agencies spend months onboarding and still miss the mark.
-              AI tools give everyone the same bland output. We take a different
-              approach: we learn your business deeply, then build an AI system
-              that produces marketing assets that actually sound like you. Not a
-              template. Not a chatbot. A marketing engine built for your company.
+              Agencies are expensive and lose your voice. Freelancers need three
+              rounds of revisions. ChatGPT gives you the same generic output your
+              competitors get. SaaS tools promise AI marketing and produce slop.
+              We take a different approach: we build a system loaded with your
+              context — your positioning, your voice, your proof points — so
+              every piece of content sounds like you wrote it.
             </p>
           </div>
           <a

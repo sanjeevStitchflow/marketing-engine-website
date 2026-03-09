@@ -16,11 +16,11 @@ const faqs = [
   },
   {
     q: "How is this different from hiring a marketing agency?",
-    a: "Agencies spend months onboarding, assign junior staff, and produce generic work. We use AI to learn your business deeply in a single session, then build a system that produces assets in your voice. Faster, more consistent, and a fraction of the cost.",
+    a: "Agencies don\u2019t know your product like you do. They spend months onboarding, assign junior staff, and still need three rounds of revisions. We build a system loaded with your context — your positioning, voice, buyer language, proof points. The output sounds like you because the system knows who you are. And you own it after the build.",
   },
   {
     q: "How is this different from using ChatGPT for marketing?",
-    a: "ChatGPT has no memory of your positioning, voice, or audience. Every session starts from zero. We build a persistent engine trained on your business. Your blog uses the same voice as your sales deck. Your outbound references the same messaging as your case studies. It\u2019s a system, not a chat.",
+    a: "Using ChatGPT raw is the \u2018naked AI\u2019 approach — no memory, no context, every session starts from zero. That\u2019s why the output sounds generic. We build a persistent engine loaded with your golden messaging, content pillars, and writing style. Your blog uses the same voice as your sales deck because they share the same foundation. It\u2019s a system, not a chat.",
   },
   {
     q: "What if I already have some marketing assets?",
@@ -36,7 +36,7 @@ const faqs = [
   },
   {
     q: "What kinds of companies do you work with?",
-    a: "Mostly B2B startups and scale-ups \u2014 founders and small teams who need a full marketing stack but don\u2019t have the bandwidth or budget for a traditional agency. If you have a product and need to tell the market about it, we can help.",
+    a: "Founders and heads of marketing who know they should be doing more but don\u2019t have the bandwidth. Typically B2B startups and scale-ups where one person or a small team covers the entire marketing function. If you\u2019re juggling between AI tools and still getting generic output, this is built for you.",
   },
 ];
 

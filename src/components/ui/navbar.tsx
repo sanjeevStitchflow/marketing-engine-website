@@ -9,6 +9,7 @@ import { cn } from "@/lib/utils";
 const menuItems = [
   { name: "What We Do", path: "#what-we-do" },
   { name: "How It Works", path: "#how-it-works" },
+  { name: "One Pager", path: "/one-pager" },
   { name: "Pricing", path: "#pricing" },
   { name: "FAQ", path: "#faq" },
 ];
@@ -52,7 +53,7 @@ export default function Navbar() {
               >
                 <Terminal className="w-5 h-5 text-[#363338]" />
                 <span className="font-semibold text-lg text-[#363338] tracking-tight">
-                  Marketing Engine
+                  Marketing Engine by Stitchflow
                 </span>
               </Link>
 

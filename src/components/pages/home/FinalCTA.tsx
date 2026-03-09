@@ -12,12 +12,12 @@ export default function FinalCTA() {
           }}
         >
           <h2 className="text-3xl md:text-[3.25rem] font-semibold tracking-tighter text-white leading-[1.15] mb-5 max-w-[820px] mx-auto">
-            Stop explaining your product to every new freelancer. Let us build
-            your marketing engine.
+            You should be doing more in marketing. Now you can.
           </h2>
           <p className="text-base md:text-lg text-white/60 leading-relaxed max-w-[480px] md:max-w-[580px] mx-auto mb-10">
-            One conversation. One engine. Every marketing asset you need —
-            consistent, on-brand, and ready to use.
+            One discovery session. One engine built on your context. Blogs,
+            sales decks, outbound, case studies — all in your voice.
+            You own it. The capability compounds.
           </p>
           <div className="flex justify-center">
             <a

@@ -36,11 +36,11 @@ export default function FooterSection() {
           {/* Brand */}
           <div>
             <span className="font-semibold text-lg text-[#363338] tracking-tight">
-              Marketing Engine
+              Marketing Engine by Stitchflow
             </span>
             <p className="text-[15px] text-[#6B6775] leading-relaxed max-w-[280px] mt-4">
-              We build AI-powered marketing systems for B2B startups. Your
-              positioning, your voice, every asset.
+              We make marketing teams AI-native. Your context, your voice,
+              every asset. You own the engine.
             </p>
           </div>
 
@@ -80,7 +80,7 @@ export default function FooterSection() {
         {/* Bottom */}
         <div className="border-t border-[#D1C9BE] py-6 text-center">
           <p className="text-sm text-[#8A8490]">
-            &copy; {new Date().getFullYear()} Marketing Engine. All rights
+            &copy; {new Date().getFullYear()} Marketing Engine by Stitchflow. All rights
             reserved.
           </p>
         </div>

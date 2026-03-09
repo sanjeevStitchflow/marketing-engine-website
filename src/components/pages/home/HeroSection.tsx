@@ -11,23 +11,24 @@ export default function HeroSection() {
       <Container paddingTop="none" paddingBottom="none">
         <div className="pt-32 md:pt-44 lg:pt-52 pb-20 md:pb-28 lg:pb-36 max-w-[780px] mx-auto text-center">
           <h1 className="text-3xl md:text-[3.5rem] md:leading-[1.1] font-semibold tracking-tighter text-gray-900">
-            We build your AI-powered
+            You know you should be doing
             <br className="hidden md:block" />
-            {" "}marketing machine.
+            {" "}more in marketing.
           </h1>
 
           <p className="mt-6 text-xl md:text-2xl font-medium text-gray-900">
-            Blogs. Sales decks. Outbound. Case studies. Explainer videos.
+            You don&apos;t need another tool. You need a system that knows your business.
           </p>
 
           <div className="mt-6 flex flex-col gap-2 text-lg text-[#5A5662] leading-relaxed max-w-[640px] mx-auto">
             <p>
-              We learn your business, extract your positioning, and set up an
-              AI-powered engine that produces marketing assets in your voice —
-              not generic templates.
+              Marketing Engine by Stitchflow builds you an AI-powered engine
+              loaded with your positioning, voice, and buyer language. Blogs,
+              sales decks, outbound, case studies — output that sounds like you,
+              not like a robot.
             </p>
             <p>
-              You get a full marketing stack. We handle the build.
+              You own the engine. The capability compounds.
             </p>
           </div>
 
