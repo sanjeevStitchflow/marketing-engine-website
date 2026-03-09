@@ -338,24 +338,25 @@ export default function OnePagerPage() {
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="rounded-xl border border-[#E8E4DF] bg-[#FAF9F8] p-6">
-                <p className="font-semibold text-[#363338] mb-2">
-                  Engine Build
+                <p className="font-semibold text-[#363338] mb-1">
+                  Engine Build — $3,000
                 </p>
+                <p className="text-[13px] text-[#8A8490] mb-2">One-time engagement</p>
                 <p className="text-[14px] text-[#6B6775] leading-relaxed">
-                  One-time engagement. Discovery, positioning framework,
+                  Includes setup, discovery, positioning framework,
                   messaging, writing style, and your first set of marketing
                   assets. You walk away with a working engine.
                 </p>
               </div>
               <div className="rounded-xl border border-[#E8E4DF] bg-[#FAF9F8] p-6">
-                <p className="font-semibold text-[#363338] mb-2">
-                  Ongoing Consulting
+                <p className="font-semibold text-[#363338] mb-1">
+                  Retainer — $1,000/mo
                 </p>
+                <p className="text-[13px] text-[#8A8490] mb-2">Limited hours, ongoing support</p>
                 <p className="text-[14px] text-[#6B6775] leading-relaxed">
-                  Available if you need changes to the system, new content
-                  types, or engine updates as your positioning evolves.
-                  You&apos;re not paying for a subscription — you&apos;re paying
-                  for capability.
+                  New content, engine updates, and campaign refreshes as
+                  your positioning evolves. Available when you need changes
+                  to the system.
                 </p>
               </div>
             </div>

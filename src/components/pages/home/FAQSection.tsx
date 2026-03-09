@@ -12,7 +12,7 @@ const faqs = [
   },
   {
     q: "How much does it cost?",
-    a: "Pricing depends on scope. The engine build is a one-time engagement. Ongoing content and campaigns are on a retainer. Book a call and we\u2019ll scope what makes sense for your stage and budget.",
+    a: "The engine build is a $3,000 one-time engagement — includes setup, discovery, positioning, and your first set of assets. If you want ongoing support, the retainer is $1,000/month for limited hours — new content, engine updates, and campaign refreshes.",
   },
   {
     q: "How is this different from hiring a marketing agency?",

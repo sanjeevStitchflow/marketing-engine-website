@@ -40,16 +40,16 @@ export default function PricingSection() {
                 Engine Build
               </p>
               <h3 className="text-[2.75rem] md:text-[3rem] font-semibold tracking-tight text-[#1A1A1A] leading-none">
-                One-time
+                $3,000
               </h3>
               <p className="text-[15px] text-[#8A8490] mt-2 mb-10">
-                We build your complete marketing engine.
+                One-time engagement. We build your complete marketing engine.
               </p>
               <p className="text-[15px] text-[#4A4550] leading-relaxed">
-                Discovery session, positioning framework, messaging, writing
-                style, and your first set of marketing assets. Blog posts,
-                sales deck, case study framework, ICP list, outbound sequences
-                — the full stack.
+                Includes setup, discovery session, positioning framework,
+                messaging, writing style, and your first set of marketing
+                assets. Blog posts, sales deck, case study framework, ICP list,
+                outbound sequences — the full stack.
               </p>
             </div>
           </div>
@@ -60,10 +60,10 @@ export default function PricingSection() {
               Ongoing
             </p>
             <h3 className="text-[2.75rem] md:text-[3rem] font-semibold tracking-tight text-[#1A1A1A] leading-none">
-              Retainer
+              $1,000<span className="text-lg font-normal text-[#8A8490]">/mo</span>
             </h3>
             <p className="text-[15px] text-[#8A8490] mt-2 mb-10">
-              Continuous content and campaign production.
+              Retainer for limited hours. Ongoing content and engine updates.
             </p>
 
             <div className="flex-1">
@@ -83,10 +83,6 @@ export default function PricingSection() {
                 </div>
               ))}
             </div>
-
-            <p className="mt-6 text-sm text-[#8A8490]">
-              Pricing depends on scope. Let&apos;s talk about what you need.
-            </p>
           </div>
         </div>
 
