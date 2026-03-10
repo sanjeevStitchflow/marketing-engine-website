@@ -1,140 +1,141 @@
 "use client";
 
-import React, { useEffect, useState, useRef } from "react";
-import { X, Menu, Terminal } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { X, Menu } from "lucide-react";
 import Link from "next/link";
-import Button from "./Button";
 import { cn } from "@/lib/utils";
+import { motion, AnimatePresence } from "framer-motion";
 
-const menuItems = [
-  { name: "What We Do", path: "#what-we-do" },
-  { name: "How It Works", path: "#how-it-works" },
-  { name: "One Pager", path: "/one-pager" },
-  { name: "Pricing", path: "#pricing" },
-  { name: "FAQ", path: "#faq" },
+const navLinks = [
+  { name: "How It Works", href: "#how-it-works" },
+  { name: "Features", href: "#features" },
+  { name: "FAQ", href: "#faq" },
 ];
-
-const ctaButton = {
-  text: "Book a call",
-  link: "#cta",
-};
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const headerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0);
+      setIsScrolled(window.scrollY > 20);
     };
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Lock body scroll when mobile menu is open
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isOpen]);
+
   return (
-    <div className="fixed z-[999] top-0 inset-x-0">
-      <div
-        ref={headerRef}
-        className={cn(
-          "z-[80] w-full transition-all duration-500 ease-in-out bg-transparent",
-          {
-            "bg-[rgba(248,245,243,0.85)] backdrop-blur-[5px]": isScrolled,
-            "bg-[#ffffff]": isOpen,
-          }
-        )}
-      >
-        <div className="relative w-full max-w-[1400px] flex items-center py-4 px-4 lg:px-8 mx-auto">
-          <div className="flex w-full items-center justify-between">
-            <div className="flex items-center justify-between gap-4 md:gap-12 w-full">
+    <header
+      className={cn(
+        "fixed top-0 inset-x-0 z-[999] transition-all duration-300",
+        isScrolled
+          ? "bg-[var(--color-background)]/80 backdrop-blur-xl border-b border-[var(--color-border)]"
+          : "bg-transparent"
+      )}
+    >
+      <nav className="w-full max-w-[1400px] mx-auto flex items-center justify-between px-4 lg:px-8 py-4">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2 z-50">
+          <span className="font-bold text-lg text-[var(--color-text-primary)] tracking-tight">
+            Stitchflow
+          </span>
+        </Link>
+
+        {/* Desktop Nav Links — Center */}
+        <ul className="hidden lg:flex items-center gap-8">
+          {navLinks.map((link) => (
+            <li key={link.name}>
               <Link
-                href="/"
-                className="flex items-center gap-2 cursor-pointer pb-[2px]"
+                href={link.href}
+                className="text-sm font-medium text-[var(--color-text-secondary)] hover:text-[var(--color-text-primary)] transition-colors duration-200"
               >
-                <Terminal className="w-5 h-5 text-[#363338]" />
-                <span className="font-semibold text-lg text-[#363338] tracking-tight">
-                  Marketing Engine by Stitchflow
-                </span>
+                {link.name}
               </Link>
+            </li>
+          ))}
+        </ul>
 
-              <nav className="hidden lg:flex justify-between w-full">
-                <ul className="relative flex items-center gap-6 xl:gap-6 px-0">
-                  {menuItems.map((item) => (
-                    <li key={item.name}>
-                      <Link
-                        href={item.path}
-                        className="font-medium text-[#363338] hover:text-gray-600 py-2"
-                      >
-                        {item.name}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
-
-                <div className="hidden lg:flex justify-end items-center gap-3">
-                  <Button
-                    variant="primary"
-                    onClick={() => {
-                      document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" });
-                    }}
-                    withArrow
-                    arrowAnimation="click"
-                  >
-                    {ctaButton.text}
-                  </Button>
-                </div>
-              </nav>
-            </div>
-
-            <button
-              type="button"
-              aria-label="Toggle navigation"
-              className="lg:hidden p-2 top-1 right-3 absolute"
-              onClick={() => setIsOpen(!isOpen)}
-            >
-              {isOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </button>
-          </div>
+        {/* Desktop CTA */}
+        <div className="hidden lg:flex items-center">
+          <Link
+            href="#cta"
+            className="px-5 py-2.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-indigo-500 to-violet-500 hover:from-indigo-400 hover:to-violet-400 transition-all duration-200 shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/40"
+          >
+            Book a Call
+          </Link>
         </div>
 
-        {isOpen && (
-          <div className="w-full z-40 lg:hidden h-[100vh] bg-white">
-            <div className="h-full pt-0 pb-36 pl-0.5 pr-2 overflow-y-auto bg-white">
-              <div className="p-4 pb-10 space-y-6">
-                {menuItems.map((item) => (
-                  <div key={item.name}>
-                    <Link
-                      href={item.path}
-                      onClick={() => setIsOpen(false)}
-                      className="flex items-center justify-between w-full font-semibold text-lg"
-                    >
-                      {item.name}
-                    </Link>
-                  </div>
-                ))}
+        {/* Mobile Hamburger */}
+        <button
+          type="button"
+          aria-label="Toggle navigation"
+          className="lg:hidden relative z-50 p-2 text-[var(--color-text-primary)]"
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+        </button>
+      </nav>
 
-                <div className="flex border-y border-gray-100/75 flex-row gap-4 py-4 flex-wrap">
-                  <Button
-                    variant="primary"
-                    onClick={() => {
-                      document.getElementById("cta")?.scrollIntoView({ behavior: "smooth" });
-                      setIsOpen(false);
-                    }}
-                    withArrow
-                    arrowAnimation="click"
+      {/* Mobile Menu Overlay */}
+      <AnimatePresence>
+        {isOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -20 }}
+            transition={{ duration: 0.25, ease: "easeOut" }}
+            className="fixed inset-0 z-40 bg-[var(--color-background)] lg:hidden"
+          >
+            <div className="flex flex-col items-center justify-center h-full gap-8">
+              {navLinks.map((link, i) => (
+                <motion.div
+                  key={link.name}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.05 * (i + 1), duration: 0.3 }}
+                >
+                  <Link
+                    href={link.href}
+                    onClick={() => setIsOpen(false)}
+                    className="text-2xl font-semibold text-[var(--color-text-primary)] hover:text-[var(--color-accent)] transition-colors duration-200"
                   >
-                    {ctaButton.text}
-                  </Button>
-                </div>
-              </div>
+                    {link.name}
+                  </Link>
+                </motion.div>
+              ))}
+
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{
+                  delay: 0.05 * (navLinks.length + 1),
+                  duration: 0.3,
+                }}
+              >
+                <Link
+                  href="#cta"
+                  onClick={() => setIsOpen(false)}
+                  className="mt-4 px-8 py-3 rounded-xl text-base font-semibold text-white bg-gradient-to-r from-indigo-500 to-violet-500 shadow-lg shadow-indigo-500/25"
+                >
+                  Book a Call
+                </Link>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         )}
-      </div>
-    </div>
+      </AnimatePresence>
+    </header>
   );
 }

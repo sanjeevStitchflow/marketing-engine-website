@@ -1,32 +1,32 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Inter, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const inter = Inter({
+  variable: "--font-inter",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const jetbrainsMono = JetBrains_Mono({
+  variable: "--font-jetbrains-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Marketing Engine by Stitchflow | Become an AI-Native Marketing Team",
+  title: "Marketing Engine by Stitchflow — Turn Technical Knowledge into Pipeline",
   description:
-    "We build you an AI-powered marketing engine loaded with your context. Blogs, sales decks, outbound, case studies — output that sounds like you, not like a robot.",
+    "AI-powered marketing engine for technical founders. Capture your product knowledge once, produce blogs, outbound, case studies, and sales decks at 10x speed. Built by Stitchflow.",
   openGraph: {
-    title: "Marketing Engine by Stitchflow | Become an AI-Native Marketing Team",
+    title: "Marketing Engine by Stitchflow — Turn Technical Knowledge into Pipeline",
     description:
-      "Stop juggling AI tools for generic output. We build a marketing engine loaded with your positioning, voice, and buyer language. The output sounds like you.",
+      "Your product closes 40% of demos. Your marketing can't keep up. Marketing Engine fixes that — an AI agent loaded with your context that produces technically accurate content at scale.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Marketing Engine by Stitchflow | Become an AI-Native Marketing Team",
+    title: "Marketing Engine by Stitchflow — Turn Technical Knowledge into Pipeline",
     description:
-      "Stop juggling AI tools for generic output. We build a marketing engine loaded with your positioning, voice, and buyer language. The output sounds like you.",
+      "Your product closes 40% of demos. Your marketing can't keep up. Marketing Engine fixes that — an AI agent loaded with your context that produces technically accurate content at scale.",
   },
 };
 
@@ -38,7 +38,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
+        className={`${inter.variable} ${jetbrainsMono.variable} font-sans antialiased`}
         style={{ margin: 0 }}
       >
         {children}

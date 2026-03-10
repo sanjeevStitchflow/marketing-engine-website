@@ -7,50 +7,43 @@ interface FooterLink {
   external?: boolean;
 }
 
-const footerLinks: Record<string, FooterLink[]> = {
-  Services: [
-    { label: "Positioning & Messaging", href: "#what-we-do" },
-    { label: "Blog Content", href: "#what-we-do" },
-    { label: "Case Studies", href: "#what-we-do" },
-    { label: "Sales Decks", href: "#what-we-do" },
-    { label: "Outbound Campaigns", href: "#what-we-do" },
-    { label: "ICP & Prospect Lists", href: "#what-we-do" },
+const footerColumns: Record<string, FooterLink[]> = {
+  Product: [
+    { label: "How It Works", href: "#how-it-works" },
+    { label: "Features", href: "#features" },
+    { label: "FAQ", href: "#faq" },
   ],
   Company: [
-    { label: "How It Works", href: "#how-it-works" },
-    { label: "Pricing", href: "#pricing" },
-    { label: "FAQ", href: "#faq" },
-    { label: "Book a Call", href: "#cta" },
+    { label: "About Stitchflow", href: "https://stitchflow.com", external: true },
+    { label: "Blog", href: "https://stitchflow.com/blog", external: true },
+  ],
+  Contact: [
+    { label: "sanjeev@stitchflow.com", href: "mailto:sanjeev@stitchflow.com" },
   ],
 };
 
 export default function FooterSection() {
   return (
-    <footer
-      style={{
-        background: "linear-gradient(to top, #E0D5C8, #FAF9F8)",
-      }}
-    >
-      <Container paddingTop="default" paddingBottom="none">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 md:gap-8 pb-16">
+    <footer className="border-t border-border bg-background py-16">
+      <Container variant="contained">
+        <div className="grid grid-cols-1 md:grid-cols-[2fr_1fr_1fr_1fr] gap-12 md:gap-8">
           {/* Brand */}
           <div>
-            <span className="font-semibold text-lg text-[#363338] tracking-tight">
-              Marketing Engine by Stitchflow
-            </span>
-            <p className="text-[15px] text-[#6B6775] leading-relaxed max-w-[280px] mt-4">
-              We make marketing teams AI-native. Your context, your voice,
-              every asset. You own the engine.
+            <p className="font-bold text-lg text-text-primary mb-2">
+              Stitchflow
+            </p>
+            <p className="text-text-muted text-sm">
+              Marketing Engine for technical founders
             </p>
           </div>
 
-          {/* Links */}
-          {Object.entries(footerLinks).map(([section, links]) => (
-            <div key={section}>
-              <p className="font-mono text-xs font-medium tracking-widest uppercase text-[#8A8490] mb-4">
-                {section}
+          {/* Link columns */}
+          {Object.entries(footerColumns).map(([title, links]) => (
+            <div key={title}>
+              <p className="text-xs font-semibold uppercase tracking-widest text-text-muted mb-4">
+                {title}
               </p>
-              <ul className="space-y-2.5">
+              <ul>
                 {links.map((link) => (
                   <li key={link.label}>
                     {link.external ? (
@@ -58,14 +51,14 @@ export default function FooterSection() {
                         href={link.href}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-[15px] text-[#5A5662] hover:text-[#363338] transition-colors"
+                        className="text-text-muted text-sm py-1 block hover:text-text-primary transition-colors"
                       >
                         {link.label}
                       </a>
                     ) : (
                       <Link
                         href={link.href}
-                        className="text-[15px] text-[#5A5662] hover:text-[#363338] transition-colors"
+                        className="text-text-muted text-sm py-1 block hover:text-text-primary transition-colors"
                       >
                         {link.label}
                       </Link>
@@ -77,11 +70,10 @@ export default function FooterSection() {
           ))}
         </div>
 
-        {/* Bottom */}
-        <div className="border-t border-[#D1C9BE] py-6 text-center">
-          <p className="text-sm text-[#8A8490]">
-            &copy; {new Date().getFullYear()} Marketing Engine by Stitchflow. All rights
-            reserved.
+        {/* Bottom bar */}
+        <div className="border-t border-border pt-6 mt-12">
+          <p className="text-text-muted text-xs">
+            &copy; 2026 Stitchflow. All rights reserved.
           </p>
         </div>
       </Container>
